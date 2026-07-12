@@ -15,11 +15,11 @@ def main() -> None:
             if event.type == pygame.QUIT:
                 return
             
-            screen.fill("black")
-            pygame.display.flip()
+        screen.fill("black")
+        pygame.display.flip()
 
-            # limit the framerate to 60 FPS
-            dt = game_clock.tick(60) / 1000
+        # limit the framerate to 60 FPS
+        dt = game_clock.tick(60) / 1000
     print(f"Starting Asteroids with pygame version: {pygame.version.ver}")
     print(f"Screen width: {SCREEN_WIDTH}")
     print(f"Screen height: {SCREEN_HEIGHT}")
