@@ -20,7 +20,10 @@ def main() -> None:
                 return
         
         screen.fill("black")
+        
         PlayerTriangle.draw(screen)
+        PlayerTriangle.update(dt)
+
         pygame.display.flip()
 
         # limit the framerate to 60 FPS
