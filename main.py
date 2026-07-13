@@ -8,6 +8,10 @@ def main() -> None:
     y = SCREEN_HEIGHT / 2
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+
+    updatable = pygame.sprite.Group()
+    drawable = pygame.sprite.Group()
+    Player.containers = (updatable, drawable)
     PlayerTriangle = Player(x, y)
     game_clock = pygame.time.Clock()
     dt = 0.0
@@ -21,8 +25,9 @@ def main() -> None:
         
         screen.fill("black")
         
-        PlayerTriangle.draw(screen)
-        PlayerTriangle.update(dt)
+        updatable.update(dt)
+        for drawable_thing in drawable:
+            drawable_thing.draw(screen)
 
         pygame.display.flip()
 
