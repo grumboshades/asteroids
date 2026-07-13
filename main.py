@@ -8,7 +8,7 @@ from shot import Shot
 
 def main() -> None:
     x = SCREEN_WIDTH / 2
-    y = SCREEN_HEIGHT / 2a
+    y = SCREEN_HEIGHT / 2
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
@@ -50,9 +50,9 @@ def main() -> None:
 
         # limit the framerate to 60 FPS
         dt = game_clock.tick(60) / 1000
-    print(f"Starting Asteroids with pygame version: {pygame.version.ver}")
-    print(f"Screen width: {SCREEN_WIDTH}")
-    print(f"Screen height: {SCREEN_HEIGHT}")
+    # print(f"Starting Asteroids with pygame version: {pygame.version.ver}")
+    # print(f"Screen width: {SCREEN_WIDTH}")
+    # print(f"Screen height: {SCREEN_HEIGHT}")
 
 
 if __name__ == "__main__":
